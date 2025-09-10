@@ -708,6 +708,15 @@
             font-size: 1.1rem;
         }
         
+        #error-message {
+            display: none;
+            color: #ff6b6b;
+            margin-top: 20px;
+            padding: 10px;
+            background: #fff3f3;
+            border-radius: 8px;
+        }
+        
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.8rem;
@@ -769,6 +778,15 @@
             100% {
                 transform: translateY(0px);
             }
+        }
+        
+        .fa-spinner {
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
@@ -839,11 +857,11 @@
                         <button type="submit"><i class="fas fa-gem"></i> Reserve My Premium Copy</button>
                     </form>
                     <div id="confirmation-message">
-                        <i class="fas fa-check-circle"></i> Thank you! We've added you to our exclusive pre-sale list.
+                        <i class="fas fa-check-circle"></i> Thank you! We've added you to our exclusive pre-sale list. Check your email for confirmation.
                     </div>
-                    <div id="error-message" style="display: none; color: #ff6b6b; margin-top: 20px; padding: 10px; background: #fff3f3; border-radius: 8px;">
-    <i class="fas fa-exclamation-circle"></i> <span id="error-text"></span>
-</div>
+                    <div id="error-message">
+                        <i class="fas fa-exclamation-circle"></i> <span id="error-text"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -998,67 +1016,67 @@
         updateCountdown();
         
         // Form submission
-// Form submission
-document.getElementById('preorder-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-    const button = this.querySelector('button');
-    const originalButtonText = button.innerHTML;
-    
-    // Validate email
-    if (!email || !email.includes('@')) {
-        showError('Please enter a valid email address.');
-        return;
-    }
-    
-    // Show loading state
-    button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
-    button.disabled = true;
-    
-    try {
-        // Replace with your Google Apps Script URL
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxUOZ0GDKuUBYGdVFxEuisgE23DBVPUb08xcaknNYfW_blqWEZpHRITQnr79FWbnLBh/exec';
-        
-        // Send data to Google Sheets via Google Apps Script
-        const response = await fetch(scriptURL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({email: email})
+        document.getElementById('preorder-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const button = this.querySelector('button');
+            const originalButtonText = button.innerHTML;
+            
+            // Validate email
+            if (!email || !email.includes('@')) {
+                showError('Please enter a valid email address.');
+                return;
+            }
+            
+            // Show loading state
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            button.disabled = true;
+            
+            try {
+                // Replace with your Google Apps Script URL
+                const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+                
+                // Send data to Google Sheets via Google Apps Script
+                const response = await fetch(scriptURL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({email: email})
+                });
+                
+                // Show success message
+                const confirmationMessage = document.getElementById('confirmation-message');
+                confirmationMessage.style.display = 'block';
+                
+                // Hide any error message
+                document.getElementById('error-message').style.display = 'none';
+                
+                // Reset form
+                document.getElementById('preorder-form').reset();
+                
+            } catch (error) {
+                console.error('Error:', error);
+                showError('Something went wrong. Please try again.');
+            } finally {
+                // Reset button state
+                button.innerHTML = originalButtonText;
+                button.disabled = false;
+            }
         });
         
-        // Show success message
-        const confirmationMessage = document.getElementById('confirmation-message');
-        confirmationMessage.style.display = 'block';
+        function showError(message) {
+            const errorElement = document.getElementById('error-message');
+            document.getElementById('error-text').textContent = message;
+            errorElement.style.display = 'block';
+            
+            // Hide after 5 seconds
+            setTimeout(() => {
+                errorElement.style.display = 'none';
+            }, 5000);
+        }
         
-        // Hide any error message
-        document.getElementById('error-message').style.display = 'none';
-        
-        // Reset form
-        document.getElementById('preorder-form').reset();
-        
-    } catch (error) {
-        console.error('Error:', error);
-        showError('Something went wrong. Please try again.');
-    } finally {
-        // Reset button state
-        button.innerHTML = originalButtonText;
-        button.disabled = false;
-    }
-});
-
-function showError(message) {
-    const errorElement = document.getElementById('error-message');
-    document.getElementById('error-text').textContent = message;
-    errorElement.style.display = 'block';
-    
-    // Hide after 5 seconds
-    setTimeout(() => {
-        errorElement.style.display = 'none';
-    }, 5000);
-}        
         // FAQ accordion
         const accordionHeaders = document.querySelectorAll('.accordion-header');
         accordionHeaders.forEach(header => {

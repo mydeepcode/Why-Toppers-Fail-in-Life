@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Toppers Fail in Life - Pre-Sale</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c1a4d;
+            --secondary: #6d4cbc;
+            --accent: #d4af37;
+            --light: #f8f6f2;
+            --dark: #1f1f2d;
+            --success: #00b894;
+            --gradient: linear-gradient(135deg, #2c1a4d 0%, #6d4cbc 100%);
+            --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f9e076 100%);
+            --premium-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: #333;
+            line-height: 1.7;
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: var(--gradient);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+            font-size: 1.1rem;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%232c1a4d" fill-opacity="0.03" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,213.3C1248,235,1344,213,1392,202.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            z-index: -1;
+        }
+        
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            color: var(--dark);
+            line-height: 1.2;
+            font-weight: 800;
+        }
+        
+        .hero-highlight {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero-highlight:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gold-gradient);
+            border-radius: 3px;
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin: 0 auto 40px;
+            color: #555;
+            max-width: 800px;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+        
+        /* Premium 3D Book Section */
+        .book-showcase {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            margin: 80px 0;
+            flex-wrap: wrap;
+        }
+        
+        .book-3d {
+            width: 360px;
+            height: 480px;
+            position: relative;
+            perspective: 1500px;
+            filter: drop-shadow(0 25px 40px rgba(0,0,0,0.25));
+        }
+        
+        .book-cover {
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 15px 20px 20px 15px;
+            transform-style: preserve-3d;
+            transform: rotateY(-20deg);
+            transition: transform 0.5s ease;
+            box-shadow: 20px 25px 50px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .book-cover-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #2c3e50 0%, #1a202c 100%);
+            position: relative;
+            padding: 40px;
+        }
+        
+        .book-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        
+        .book-cover:hover {
+            transform: rotateY(-15deg);
+        }
+        
+        .book-spine {
+            position: absolute;
+            left: 0;
+            top: 5%;
+            width: 18px;
+            height: 90%;
+            background: linear-gradient(to right, #131720 0%, #1a202c 100%);
+            transform: rotateY(-90deg) translateX(-18px);
+            border-radius: 4px 0 0 4px;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+        }
+        
+        .book-details {
+            max-width: 550px;
+            text-align: left;
+        }
+        
+        .book-details h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            color: var(--dark);
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .book-details h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--gold-gradient);
+            border-radius: 4px;
+        }
+        
+        .book-details p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .years-badge {
+            display: inline-block;
+            background: var(--gold-gradient);
+            color: var(--dark);
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+            font-size: 1.1rem;
+        }
+        
+        .countdown {
+            background: var(--gradient);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin: 60px auto;
+            max-width: 850px;
+            text-align: center;
+            box-shadow: var(--premium-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .countdown:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><rect fill="rgba(255,255,255,0.05)" x="0" y="0" width="50" height="50"/><rect fill="rgba(255,255,255,0.05)" x="50" y="50" width="50" height="50"/></svg>');
+            background-size: 70px;
+            animation: wave 20s linear infinite;
+            z-index: 0;
+        }
+        
+        .countdown-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .countdown h2 {
+            margin-bottom: 30px;
+            font-size: 2rem;
+            font-weight: 600;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        #timer {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+        
+        #timer div {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 30px 20px;
+            border-radius: 15px;
+            min-width: 120px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.15);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        #timer span {
+            font-size: 3rem;
+            font-weight: bold;
+            display: block;
+            font-family: 'Playfair Display', serif;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        #timer .timer-label {
+            font-size: 1.1rem;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+        
+        .price-tag {
+            background: white;
+            padding: 20px 40px;
+            border-radius: 60px;
+            display: inline-block;
+            margin: 30px 0;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 1.8rem;
+            border: 3px solid var(--accent);
+            position: relative;
+        }
+        
+        .price-tag s {
+            color: #999;
+            margin-right: 15px;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        
+        .discount-badge {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        
+        .form-section {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            margin: 60px auto;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: var(--premium-shadow);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .form-section h2 {
+            color: var(--dark);
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .form-group {
+            margin-bottom: 30px;
+        }
+        
+        input[type="email"] {
+            width: 100%;
+            max-width: 550px;
+            padding: 20px 30px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        input[type="email"]:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(44, 26, 77, 0.1);
+        }
+        
+        button {
+            background: var(--gold-gradient);
+            color: var(--dark);
+            border: none;
+            padding: 20px 50px;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+            font-family: 'Inter', sans-serif;
+        }
+        
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+        }
+        
+        button:active {
+            transform: translateY(1px);
+        }
+        
+        .features {
+            padding: 120px 0;
+            background: var(--light);
+        }
+        
+        .features h2 {
+            text-align: center;
+            margin-bottom: 70px;
+            color: var(--dark);
+            font-size: 2.8rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 50px;
+        }
+        
+        .feature {
+            background: white;
+            padding: 45px 35px;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.07);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+        
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+        }
+        
+        .feature-icon {
+            width: 90px;
+            height: 90px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: white;
+            font-size: 2.2rem;
+            box-shadow: 0 15px 25px rgba(44, 26, 77, 0.2);
+        }
+        
+        .feature h3 {
+            margin-bottom: 25px;
+            color: var(--dark);
+            font-size: 1.6rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .feature p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .testimonials {
+            padding: 120px 0;
+            background: white;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            margin-bottom: 70px;
+            color: var(--dark);
+            font-size: 2.8rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 50px;
+        }
+        
+        .testimonial {
+            background: var(--light);
+            padding: 40px;
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.07);
+        }
+        
+        .testimonial:before {
+            content: """;
+            font-size: 10rem;
+            color: var(--primary);
+            opacity: 0.08;
+            position: absolute;
+            top: -50px;
+            left: 10px;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.3rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .author-details {
+            font-weight: 700;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+        
+        .author-role {
+            font-size: 1rem;
+            color: #666;
+            font-weight: normal;
+            display: block;
+            margin-top: 5px;
+        }
+        
+        .faq {
+            padding: 120px 0;
+            background: var(--light);
+        }
+        
+        .faq h2 {
+            text-align: center;
+            margin-bottom: 70px;
+            color: var(--dark);
+            font-size: 2.8rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: 800;
+        }
+        
+        .accordion {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .accordion-item {
+            margin-bottom: 25px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .accordion-header {
+            background: white;
+            padding: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+        
+        .accordion-header:hover {
+            background: #f9f9f9;
+        }
+        
+        .accordion-content {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            background: white;
+        }
+        
+        .accordion-item.active .accordion-content {
+            max-height: 300px;
+            padding: 30px;
+        }
+        
+        .accordion-item.active .accordion-header {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .accordion-item.active .accordion-header span {
+            transform: rotate(45deg);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 100px 0 50px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 30px;
+            font-size: 1.6rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.3rem;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        
+        #confirmation-message {
+            display: none;
+            background: var(--success);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 30px;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            #timer {
+                flex-wrap: wrap;
+            }
+            
+            #timer div {
+                min-width: 100px;
+                padding: 20px 15px;
+            }
+            
+            #timer span {
+                font-size: 2.5rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .book-showcase {
+                gap: 50px;
+            }
+            
+            .book-3d {
+                width: 300px;
+                height: 420px;
+            }
+        }
+        
+        @keyframes wave {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Why Toppers Fail in Life</div>
+            <div class="nav-links">
+                <a href="#features">What's Inside</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#faq">FAQ</a>
+                <a href="#preorder">Pre-Order</a>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Lessons Schools Never <span class="hero-highlight"> Taught</span></h1>
+                <p>Discover why many toppers struggle after school while average students often succeed in life</p>
+                
+                <!-- Premium 3D Book Showcase -->
+                <div class="book-showcase">
+                    <div class="book-3d">
+                        <div class="book-cover">
+                            <!-- YOUR BOOK COVER GOES HERE -->
+                            <div class="book-cover-img">
+                                <img src="https://i.ibb.co/RpDcT5sV/Why-Toppers-Fail-in-Life.png" alt="Why Toppers Fail in Life Book Cover" class="book-img">
+                            </div>
+                            <div class="book-spine"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="book-details">
+                        <div class="years-badge">3 Years in the Making</div>
+                        <h2 class="premium-border">The Book Is Ready!</h2>
+                        <p>After three years of extensive research, interviews, and writing, "Why Toppers Fail in Life" is complete and ready for release on October 18th, 2025.</p>
+                        <p>This groundbreaking book reveals the surprising truths about success that they don't teach in classrooms.</p>
+                        
+                        <div class="price-tag">
+                            <s>₹799</s> <span>₹199</span>
+                            <div class="discount-badge">75% OFF</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="countdown">
+                    <div class="countdown-content">
+                        <h2>Pre-Sale Ends In:</h2>
+                        <div id="timer">
+                            <div><span id="days">00</span><span class="timer-label">Days</span></div>
+                            <div><span id="hours">00</span><span class="timer-label">Hours</span></div>
+                            <div><span id="minutes">00</span><span class="timer-label">Minutes</span></div>
+                            <div><span id="seconds">00</span><span class="timer-label">Seconds</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section" id="preorder">
+                    <h2>Get Early Access + Special Discount</h2>
+                    <p>Join the exclusive waitlist and be among the first to read this life-changing book</p>
+                    
+                    <form id="preorder-form">
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Enter your best email address" required>
+                        </div>
+                        <button type="submit"><i class="fas fa-gem"></i> Reserve My Premium Copy</button>
+                    </form>
+                    <div id="confirmation-message">
+                        <i class="fas fa-check-circle"></i> Thank you! We've added you to our exclusive pre-sale list.
+                    </div>
+                    <div id="error-message" style="display: none; color: #ff6b6b; margin-top: 20px; padding: 10px; background: #fff3f3; border-radius: 8px;">
+    <i class="fas fa-exclamation-circle"></i> <span id="error-text"></span>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features" id="features">
+        <div class="container">
+            <h2>What You'll Discover In This <span class="hero-highlight">Groundbreaking Book</span></h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>The Topper Paradox</h3>
+                    <p>Why straight-A students often struggle in real-world scenarios while average students excel in life beyond academics</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Beyond Textbook Knowledge</h3>
+                    <p>The critical life skills that aren't taught in classrooms but determine real success in career and relationships</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Balance Is Everything</h3>
+                    <p>How to succeed in studies without failing in life - the art of holistic development for long-term achievement</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Long-Term Success Blueprint</h3>
+                    <p>Strategies that help you win in the real world, not just in examination halls</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What <span class="hero-highlight">Early Readers</span> Are Saying</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p>"This book completely changed my perspective as a parent. I now understand how to guide my children toward true success, not just academic achievement."</p>
+                    <div class="author">
+                        <div class="author-img">RM</div>
+                        <div class="author-details">Rahul Mehta <span class="author-role">Parent & Education Consultant</span></div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"As a former topper who struggled after college, this book articulated everything I experienced. It provided practical strategies to rewrite my success story."</p>
+                    <div class="author">
+                        <div class="author-img">PK</div>
+                        <div class="author-details">Priya Kumar <span class="author-role">Software Engineer at Google</span></div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <p>"Every educator, parent and student needs to read this revolutionary book. It reveals what truly matters for long-term success and fulfillment."</p>
+                    <div class="author">
+                        <div class="author-img">AS</div>
+                        <div class="author-details">Dr. Anand Singh <span class="author-role">College Professor & Author</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Frequently Asked <span class="hero-highlight">Questions</span></h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">When will the book be released? <span>+</span></div>
+                    <div class="accordion-content">
+                        <p>The book will be officially released on October 18th, 2025. Pre-order customers will receive their copies on the launch day at 10:00 AM IST.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">What format will the book be in? <span>+</span></div>
+                    <div class="accordion-content">
+                        <p>The book will be available in multiple formats: PDF for easy reading on any device, EPUB for e-readers, and a special printable version. All pre-order customers get access to all formats.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">How much does it cost? <span>+</span></div>
+                    <div class="accordion-content">
+                        <p>The regular price will be ₹799, but for a limited pre-sale period, you can get it for just ₹199 - a 75% discount for early supporters.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Is this book only for students? <span>+</span></div>
+                    <div class="accordion-content">
+                        <p>Not at all! This book is essential reading for students, parents, educators, professionals, and anyone who wants to understand what leads to genuine, lasting success in life beyond academic achievements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Why Toppers Fail in Life</h3>
+                    <p>A groundbreaking book that reveals the truth about success beyond academic scores. Three years of research distilled into one transformative read.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With The Author</h3>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/deep-chatterjee/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/chocoherodeep/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/DeepWithData" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: deepchatterjeeofficial@gmail.com</p>
+                    <p>For bulk orders and inquiries: +91 6294750610</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023-2025 Why Toppers Fail in Life. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown timer - Set to October 18, 2025
+        function updateCountdown() {
+            const launchDate = new Date('2025-10-18T00:00:00');
+            const now = new Date();
+            const diff = launchDate - now;
+            
+            // Calculate time components
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            // Update display
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        // Initialize countdown and update every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Form submission
+// Form submission
+document.getElementById('preorder-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const button = this.querySelector('button');
+    const originalButtonText = button.innerHTML;
+    
+    // Validate email
+    if (!email || !email.includes('@')) {
+        showError('Please enter a valid email address.');
+        return;
+    }
+    
+    // Show loading state
+    button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+    button.disabled = true;
+    
+    try {
+        // Replace with your Google Apps Script URL
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxUOZ0GDKuUBYGdVFxEuisgE23DBVPUb08xcaknNYfW_blqWEZpHRITQnr79FWbnLBh/exec';
+        
+        // Send data to Google Sheets via Google Apps Script
+        const response = await fetch(scriptURL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({email: email})
+        });
+        
+        // Show success message
+        const confirmationMessage = document.getElementById('confirmation-message');
+        confirmationMessage.style.display = 'block';
+        
+        // Hide any error message
+        document.getElementById('error-message').style.display = 'none';
+        
+        // Reset form
+        document.getElementById('preorder-form').reset();
+        
+    } catch (error) {
+        console.error('Error:', error);
+        showError('Something went wrong. Please try again.');
+    } finally {
+        // Reset button state
+        button.innerHTML = originalButtonText;
+        button.disabled = false;
+    }
+});
+
+function showError(message) {
+    const errorElement = document.getElementById('error-message');
+    document.getElementById('error-text').textContent = message;
+    errorElement.style.display = 'block';
+    
+    // Hide after 5 seconds
+    setTimeout(() => {
+        errorElement.style.display = 'none';
+    }, 5000);
+}        
+        // FAQ accordion
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                this.parentElement.classList.toggle('active');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add subtle animations to elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const features = document.querySelectorAll('.feature');
+            features.forEach((feature, index) => {
+                feature.style.animationDelay = `${index * 0.1}s`;
+                feature.classList.add('float');
+            });
+        });
+    </script>
+<!-- Social Proof Popup -->
+<div id="popup" style="
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(150%);
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    display: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    z-index: 9999;
+    transition: all 0.6s ease;
+    white-space: nowrap;
+">
+    <i class="fa-solid fa-user-check" style="color:#2c1a4d; margin-right:8px;"></i>
+    <span id="popup-text"></span>
+</div>
+
+<script>
+const names = [
+  "Arijit", "Abhijit", "Anirban", "Souvik", "Subhajit", "Debasish", "Soumen", 
+  "Rakesh", "Koushik", "Saptarshi", "Prasenjit", "Tirthankar", "Arnab", 
+  "Anupam", "Partha", "Indrajit", "Pradip", "Dipankar", "Rajarshi", "Sudipto", 
+  "Suman", "Tapas", "Bappa", "Pralay", "Santanu", "Joydeep", "Niladri", 
+  "Debjit", "Biswajit", "Sujit",
+  "Moumita", "Rupsha", "Debolina", "Poulomi", "Jharna", "Piu", "Tumpa", 
+  "Arpita", "Sraboni", "Priyanka", "Rituparna", "Madhumita", "Jaya", "Sayani", 
+  "Anindita", "Riya", "Shreya", "Payel", "Mou", "Barnali", "Kakali", 
+  "Sanchita", "Manisha", "Suchismita", "Swagata", "Chandrima", "Aparna", 
+  "Laboni", "Supriya"
+];
+
+
+let lastName = null;
+let popupCount = 0; // track how many shown
+
+function getRandomName() {
+  let name;
+  do {
+    name = names[Math.floor(Math.random() * names.length)];
+  } while (name === lastName); // avoid repeat
+  lastName = name;
+  return name;
+}
+
+function getRealisticTime() {
+  popupCount++;
+
+  // 20% chance to say "just now"
+  if (Math.random() < 0.2) {
+    return "just now";
+  }
+
+  // otherwise minutes logic
+  if (popupCount < 5) {
+    // First few: very recent
+    return (Math.floor(Math.random() * 10) + 1) + " mins ago";
+  } else if (popupCount < 15) {
+    // Middle stage: 5–30 mins
+    return (Math.floor(Math.random() * 26) + 5) + " mins ago";
+  } else {
+    // Later: 10–50 mins
+    return (Math.floor(Math.random() * 41) + 10) + " mins ago";
+  }
+}
+
+function showPopup() {
+  const randomName = getRandomName();
+  const randomTime = getRealisticTime();
+  const text = `${randomName} just pre-ordered this book ${randomTime} 🔥`;
+
+  const popup = document.getElementById("popup");
+  document.getElementById("popup-text").textContent = text;
+  
+  popup.style.display = "flex";
+  popup.style.alignItems = "center";
+  
+  // Slide up (appear)
+  setTimeout(() => {
+    popup.style.transform = "translateX(-50%) translateY(0)";
+  }, 100);
+
+  // Stay visible 7s
+  setTimeout(() => {
+    popup.style.transform = "translateX(-50%) translateY(150%)";
+  }, 7100);
+
+  // Hide completely
+  setTimeout(() => {
+    popup.style.display = "none";
+  }, 7700);
+}
+
+// Queue system
+function startPopupStream() {
+  showPopup(); // first
+  setInterval(() => {
+    showPopup();
+  }, Math.floor(Math.random() * 8000) + 12000); // 12–20s
+}
+
+// First popup after 8s
+setTimeout(startPopupStream, 8000);
+</script>
+
+
+</body>
+</html>

@@ -20,7 +20,7 @@
         }
         
         * {
-            margin: -7;
+            margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
@@ -43,7 +43,7 @@
         header {
             background: var(--gradient);
             color: white;
-            padding: 0px 0;
+            padding: 20px 0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -199,7 +199,6 @@
             justify-content: center;
             background: linear-gradient(135deg, #2c3e50 0%, #1a202c 100%);
             position: relative;
-            padding: 40px;
         }
         
         .book-img {
@@ -1034,7 +1033,7 @@
             
             try {
                 // Replace with your Google Apps Script URL
-                const scriptURL = 'https://script.google.com/macros/s/AKfycbxUOZ0GDKuUBYGdVFxEuisgE23DBVPUb08xcaknNYfW_blqWEZpHRITQnr79FWbnLBh/exec';
+                const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
                 
                 // Send data to Google Sheets via Google Apps Script
                 const response = await fetch(scriptURL, {
@@ -1223,6 +1222,3 @@ setTimeout(startPopupStream, 8000);
 
 </body>
 </html>
-
-
-
